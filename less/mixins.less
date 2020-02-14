@@ -1,1 +1,24 @@
-// Mixins in here
+.buttonStyle(@justify, @background) {
+  display: flex;
+  justify-content: @justify;
+  font-size: 2rem;
+  background-color: @background;
+  border-radius: 10px;
+  padding: 5%;
+  max-width: 80%;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  @media @mobile {
+    max-width: 100%;
+    padding: 2.5% 0;
+  }
+}
+
+.flexColumn(@max-width) {
+  display: flex;
+  flex-direction: column;
+  max-width: @max-width;
+}
